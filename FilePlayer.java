@@ -56,3 +56,13 @@ public class FilePlayer {
 		queue1 = new LinkedList<String>(Arrays.asList("do", "do", "sol", "sol", "la","la","sol","fa","fa","mi","mi","re","re","do","sol","sol","fa","fa","mi","mi","re","sol","sol","fa","fa","mi","mi","re","do","do","sol","sol","la","la","sol","fa","fa","mi","mi","re","re", "do"));
 		break;
 		case(("C")):
+			// Below is 'Someone like you' by Adele
+			queue1 = new LinkedList<String>(Arrays.asList("la", "do", "mi", "do", "la", "do", "mi", "do", "la", "do","mi", "do", "la", "do", "mi", "do", "sol", "do", "mi", "do", "sol", "do", "mi", "do", "sol", "do","mi", "do", "sol", "do", "mi", "do", "fa", "do", "fa", "do"));
+			break;
+		case(("D")):
+			System.out.println("The chords available are;\ndo, mi, sol, si, do-octave, re, fa, la\nNOTE. Have each sound separated by a space.");
+			String userInput []= sc1.nextLine().split(" ");queue1= new LinkedList<String>(Arrays.asList(userInput));break;
+		}
+		Thread1 t1 = fp.new Thread1();t1.start();Thread2 t2 = fp.new Thread2();t2.start();
+		sc.close();
+		sc1.close();
