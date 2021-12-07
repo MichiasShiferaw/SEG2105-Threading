@@ -90,3 +90,26 @@ public class FilePlayer {
 			}	
 		}
 	}
+	public class Thread2 extends Thread {
+		//private Thread2 thread2;
+    	@Override
+    	public void run() {
+			List<String> chords = Arrays.asList("re", "fa", "la", "do-octave");
+        	try {
+				while (queue1.size() > 0) { //Run O(n)
+					if (!allchords.contains(queue1.peek())){
+						queue1.poll();
+					}else{
+						Thread2.sleep(250);
+						if (chords.contains(queue1.peek())) {
+							if (queue1.peek() == "do-octave") {duet();
+							}else{load();}
+						}else{
+							Thread2.sleep(250);
+							Thread1.currentThread();}
+						}}
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
