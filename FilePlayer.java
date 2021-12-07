@@ -66,3 +66,27 @@ public class FilePlayer {
 		Thread1 t1 = fp.new Thread1();t1.start();Thread2 t2 = fp.new Thread2();t2.start();
 		sc.close();
 		sc1.close();
+    }
+	public class Thread1 extends Thread{
+		@Override
+		public void run(){
+			List<String> chords = Arrays.asList("do", "mi", "sol", "si", "do-octave");
+			try {
+				while (queue1.size()>0){// run O(n)
+					if (!allchords.contains(queue1.peek())){
+						queue1.poll();
+					}else{
+						if (chords.contains(queue1.peek())){
+							Thread1.sleep(250);
+							if (queue1.peek()=="do-octave"){duet();
+							} else {	load();}
+						}else{
+							Thread1.sleep(250);
+							Thread2.currentThread();}	
+					}
+				}
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}	
+		}
+	}
