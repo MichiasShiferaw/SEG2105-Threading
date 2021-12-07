@@ -50,3 +50,9 @@ public class FilePlayer {
 			request=input.toUpperCase();
 			if (((request.equals("A"))|| (request.equals("B"))|| (request.equals("C")) || (request.equals("D")))){break;}
 		}
+		switch(request){
+		case (("A")):queue1 = new LinkedList<String>(Arrays.asList("do","re","mi","fa","sol","la","si","do-octave"));break;
+		case(("B")):
+		queue1 = new LinkedList<String>(Arrays.asList("do", "do", "sol", "sol", "la","la","sol","fa","fa","mi","mi","re","re","do","sol","sol","fa","fa","mi","mi","re","sol","sol","fa","fa","mi","mi","re","do","do","sol","sol","la","la","sol","fa","fa","mi","mi","re","re", "do"));
+		break;
+		case(("C")):
