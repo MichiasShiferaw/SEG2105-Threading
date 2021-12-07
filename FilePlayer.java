@@ -8,3 +8,24 @@ import java.util.Scanner;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+
+/**
+ * Classs that will play music files at given paths
+ * Student Name: Michias Shiferaw
+ * Student Number: 300188168
+ * 
+ * @author Jesus Molina & Michias Shiferaw
+ * @version 2.3
+ * @since 11/16/21
+ */
+public class FilePlayer {
+	List<String> allchords = Arrays.asList("re", "fa", "la","do", "mi", "sol", "si", "do-octave");
+	static Queue<String> queue1 = new LinkedList<String>();// All performance with a LinkedQueue is O(1)
+	static FilePlayer fp = new FilePlayer();
+	/**
+	 * Plays an audio clip located at the given path
+	 * 
+	 * @param filePath
+	 *            the path to the audio clip that should be played
+	 */
+	public void play(String filePath) {
