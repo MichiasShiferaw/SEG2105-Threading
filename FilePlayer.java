@@ -29,3 +29,13 @@ public class FilePlayer {
 	 *            the path to the audio clip that should be played
 	 */
 	public void play(String filePath) {
+		try {
+			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(filePath).getAbsoluteFile());
+			Clip clip = AudioSystem.getClip();
+			clip.open(audioInputStream);
+			clip.start();
+		} catch (Exception e) {
+			System.out.println("Error with playing sound.");
+			e.printStackTrace();
+		}
+	}
