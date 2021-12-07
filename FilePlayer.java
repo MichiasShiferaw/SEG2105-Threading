@@ -39,3 +39,14 @@ public class FilePlayer {
 			e.printStackTrace();
 		}
 	}
+	
+    	public void tune(){
+		Scanner sc= new Scanner(System.in);
+		Scanner sc1 = new Scanner(System.in);
+		String request;
+		while (true){
+			System.out.println("Type in [A] for the first multi thread\nType in [B] for the Bonus {Twinkle Twinkle Litter Star}\nType in [C] for the beginning of 'Someone like you' by Adele\nType in [D] to input your own music");
+			String input = sc.next();
+			request=input.toUpperCase();
+			if (((request.equals("A"))|| (request.equals("B"))|| (request.equals("C")) || (request.equals("D")))){break;}
+		}
