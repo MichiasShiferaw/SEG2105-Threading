@@ -113,3 +113,22 @@ public class FilePlayer {
 			}
 		}
 	}
+	public synchronized void duet(){
+		fp.play("Sounds/do-octave.wav");
+		//fp.play("Sounds/do-octave.wav");
+		//System.out.println("Playing " + queue1.peek());
+		System.out.println("Playing do-octave");
+		try {
+			Thread1.sleep(250);
+			Thread2.sleep(250);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		queue1.poll();
+	}
+	public synchronized void load(){
+		System.out.println("Playing " + queue1.peek());
+		fp.play("Sounds/"+queue1.poll() + ".wav");
+	}
+}
